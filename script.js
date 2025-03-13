@@ -5,11 +5,12 @@ const resizeButton = document.querySelector("button")
 function constructGrid(gridSize){
     let fullSize = gridSize*gridSize
     console.log("Starting construction of grid with " + fullSize + " elements.")
-    document.querySelector("#container").style.width = (gridSize*100)+(gridSize*2) + "px";
+    //document.querySelector("#container").style.width = (gridSize*100)+(gridSize*2) + "px";
     for (i = 0; i < (gridSize*gridSize); i++){
         const newPixel = document.createElement("div")
         newPixel.classList.add("pixel")
-        console.log("Added a pixel!")
+        newPixel.style.width = ((500 / gridSize) - 2) + "px"
+        gridContainer.appendChild(newPixel);
     }
 }
 
