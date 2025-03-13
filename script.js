@@ -14,6 +14,16 @@ function constructGrid(gridSize){
     }
 }
 
+function randomRGB(){
+    let r = Math.floor(Math.random() * 256)
+    let g = Math.floor(Math.random() * 256)
+    let b = Math.floor(Math.random() * 256)
+    let outputColor = "rgb(" + r + ", " + g + ", " + b + ")"
+    console.log(outputColor)
+    return outputColor
+}
+
+
 //Using the same event delegation method that I used in the rock/paper/scissors project:
 gridContainer.addEventListener("mouseover", (event) => {
     let target = event.target
@@ -21,7 +31,8 @@ gridContainer.addEventListener("mouseover", (event) => {
         console.log("Container hit, do nothing!")
     } 
     else {
-        //target.style.backgroundColor = "Black"
+        //target.style.backgroundColor = "black"
+        target.style.backgroundColor = randomRGB()
         target.style.opacity -= -0.1
     }
     
