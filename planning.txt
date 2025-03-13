@@ -1,0 +1,16 @@
+2. Create a webpage with a 16x16 grid of square divs.
+
+BASIC CONSTRUCTION
+Define a default number to be squared to determine size of grid (initially, 4 -> 16).
+Append that number of squares to the #container div.
+Ensure styles allow the squares to be effectively right next to each other, edge to edge, with minimal border.
+Not NO border, just a little gray so we can see where we're drawing.
+
+DRAWING ACTION
+Define class .drawn that is styled as having a background color of pure black.
+Set up event such that on mouse hover, a square becomes black by being tagged as .drawn.
+
+RESIZE BUTTON
+Display above grid.
+When clicked, send alert asking for user to input number.
+On submission, delete existing grid and rerun construction with new size.
