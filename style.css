@@ -17,15 +17,15 @@ button{
     padding: 0;
     width: 500px;
     height: 500px;
-    border: 3px black solid;
+    opacity: 1;
 }
 
 .pixel{
     margin: 0;
     padding: 0;
     max-width: 246px;
-    aspect-ratio: 1/1;
-    background-color: white;
-    border: 1px gray dotted;
+    background-color: black;
+    opacity: 0;
+    border: 1px dotted white;
     flex: 1 1 1;
 }

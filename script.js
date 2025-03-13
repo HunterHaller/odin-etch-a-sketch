@@ -17,20 +17,30 @@ function constructGrid(gridSize){
 //Using the same event delegation method that I used in the rock/paper/scissors project:
 gridContainer.addEventListener("mouseover", (event) => {
     let target = event.target
-    target.style.backgroundColor = "Black"
+    if (target.id == "container"){
+        console.log("Container hit, do nothing!")
+    } 
+    else {
+        //target.style.backgroundColor = "Black"
+        target.style.opacity -= -0.1
+    }
+    
 })
 
 resizeButton.addEventListener("click", () => {
+    
     let userGrid = prompt("What size would you like your grid to be?");
     let userNum = Number(userGrid)
+    
     if (isNaN(userNum)){
         window.alert(userGrid + " isn't a number!!")
         console.log("ERROR: Input isn't a number.")
-    } else if (userNum > 100){
+    } 
+    else if (userNum > 100){
         window.alert("That's too big, dude! Think smaller.")
         console.log("ERROR: Input too large.")
-    } else{
-        const currentPixels = document.querySelector(".pixel")
+    } 
+    else{
         gridContainer.replaceChildren() //Without specifying new children, simply erases all current children.
         constructGrid(userNum) //
     }
